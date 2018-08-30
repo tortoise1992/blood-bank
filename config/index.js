@@ -10,7 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      "/api": {
+            "target": " https://www.easy-mock.com/mock/5b7e6bab5d50ab68f9dc3dbc/back",
+            "changeOrigin": true,
+            "pathRewrite": { "^/api" : "" }
+          }
+          // "/cross": {
+          //   "target": "http://jsonplaceholder.typicode.com",
+          //   "changeOrigin": true,
+          //   "pathRewrite": {"^/cross": ""}
+          // }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -20,7 +31,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */

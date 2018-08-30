@@ -65,7 +65,20 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
-  ]
+  ],
+  // 开发时候的跨域代理
+  // "proxy": {
+  //   "/api": {
+  //     "target": " https://www.easy-mock.com/mock/5b7e6bab5d50ab68f9dc3dbc/back",
+  //     "changeOrigin": true,
+  //     "pathRewrite": { "^/api" : "" }
+  //   }
+  //   // "/cross": {
+  //   //   "target": "http://jsonplaceholder.typicode.com",
+  //   //   "changeOrigin": true,
+  //   //   "pathRewrite": {"^/cross": ""}
+  //   // }
+  // }
 })
 
 module.exports = new Promise((resolve, reject) => {
